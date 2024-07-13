@@ -7,7 +7,6 @@ const HomePage = () => {
     <>
       <Metadata title="Home" description="Home page" />
       <ArticlesCell />
-      Home
     </>
   )
 }

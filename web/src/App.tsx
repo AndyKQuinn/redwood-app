@@ -8,17 +8,21 @@ import '@mantine/core/styles.css'
 import FatalErrorPage from 'src/pages/FatalErrorPage'
 import Routes from 'src/Routes'
 
+import { AuthProvider, useAuth } from './auth'
+
 import './scaffold.css'
 import './index.css'
 
 const App = () => (
   <FatalErrorBoundary page={FatalErrorPage}>
     <RedwoodProvider titleTemplate="%PageTitle | %AppTitle">
-      <MantineProvider theme={theme}>
-        <RedwoodApolloProvider>
-          <Routes />
-        </RedwoodApolloProvider>
-      </MantineProvider>
+      <AuthProvider>
+        <MantineProvider theme={theme}>
+          <RedwoodApolloProvider useAuth={useAuth}>
+            <Routes />
+          </RedwoodApolloProvider>
+        </MantineProvider>
+      </AuthProvider>
     </RedwoodProvider>
   </FatalErrorBoundary>
 )
