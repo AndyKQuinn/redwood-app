@@ -21545,7 +21545,6 @@ __metadata:
     "@redwoodjs/cli-storybook": "npm:7.7.3"
     "@redwoodjs/core": "npm:7.7.3"
     "@redwoodjs/project-config": "npm:7.7.3"
-    postcss: "npm:^8.4.39"
     postcss-loader: "npm:^8.1.1"
   languageName: unknown
   linkType: soft
